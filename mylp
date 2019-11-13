@@ -1,0 +1,27 @@
+\* producao *\
+Maximize
+OBJ: - 6000 ev_0 - 200000 ev_1 - 100000 ev_2 + 1200 xf_0 + 1800 xf_1
+ + 2200 xf_2
+Subject To
+LimiteHoras_0: 3 xf_0 + 4 xf_1 + 8 xf_2 <= 2000
+LimiteHoras_1: 3 xf_0 + 5 xf_1 + 6 xf_2 <= 2000
+LimiteHoras_2: 2 xf_0 + 3 xf_1 + 9 xf_2 <= 2000
+MinimoProducao_0: xf_0 >= 30
+MinimoProducao_1: xf_1 >= 30
+MinimoProducao_2: xf_2 >= 30
+ProcuraMaxima_0: xf_0 <= 400
+ProcuraMaxima_1: xf_1 <= 300
+ProcuraMaxima_2: xf_2 <= 50
+Bounds
+0 <= xf_0
+0 <= xf_1
+0 <= xf_2
+Generals
+xf_0
+xf_1
+xf_2
+Binaries
+ev_0
+ev_1
+ev_2
+End
